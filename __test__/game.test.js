@@ -1,8 +1,8 @@
 const Game = require('../src/game').default
 const fs = require('fs')
 
-const { exec } = require("child_process")
-exec("npm test -- -u", (error, stdout, stderr) => {
+const { exec } = require('child_process')
+exec('npm test -- -u', (error, stdout, stderr) => {
     if (error) {
         console.log(`error: ${error.message}`)
         return;
