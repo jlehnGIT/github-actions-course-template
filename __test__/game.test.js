@@ -1,9 +1,6 @@
 const Game = require('../src/game').default
 const fs = require('fs')
 
-const { exec } = require('child_process')
-exec('npm test -- -u')
-
 describe('App', () => {
   it('Contains the compiled JavaScript', async () => {
     fs.readFile('./public/main.js', 'utf8', (err, data) => {
