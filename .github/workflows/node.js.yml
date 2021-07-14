@@ -37,9 +37,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: actions/download-artifact@master
-        with:
-          name: webpack artifacts
-          path: public
+      with:
+        name: webpack artifacts
+        path: public
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
@@ -50,5 +50,4 @@ jobs:
         npm run build
       env:
         CI: true
-        
-        
+  
